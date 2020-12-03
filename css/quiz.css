@@ -12,7 +12,7 @@ h1{
   font-weight: 300;
   margin: 0px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 34px;
   background-color: #444;
   color: #fff;
 }
@@ -43,9 +43,14 @@ button{
 button:hover{
 	background-color: #38a;
 }
-
-
-
+.disclaimer {
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #444;
+  color: #fff;
+}
 
 /* Pagination */
 .slide{
@@ -56,6 +61,7 @@ button:hover{
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
+  outline: 1px solid pink;
 }
 .active-slide{
   opacity: 1;
@@ -63,6 +69,7 @@ button:hover{
 }
 .quiz-container{
   position: relative;
-  height: 200px;
-  margin-top: 40px;
+  height: 300px;
+  margin: 40px auto;
+  outline: 3px solid red;
 }

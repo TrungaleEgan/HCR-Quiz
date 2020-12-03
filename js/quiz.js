@@ -110,32 +110,110 @@ const submitButton = document.getElementById('submit');
 // Create Questions
 const myQuestions = [
     {
-      question: "Who invented JavaScript?",
+      question: "What is your current employment status?",
       answers: {
-        a: "Douglas Crockford",
-        b: "Sheryl Sandberg",
-        c: "Brendan Eich"
+        a: "Unemployed",
+        b: "Employed",
+        c: "Business owner",
+        d: "Retired"
       },
-      correctAnswer: "c"
+      correctAnswer: "a",
+      buttonText: "Let's keep going!"
     },
     {
-      question: "Which one of these is a JavaScript package manager?",
+      question: "Are you currently going through or anticipating a significant life event?",
       answers: {
-        a: "Node.js",
-        b: "TypeScript",
-        c: "npm"
+        a: "Selling a business",
+        b: "Recently divorced",
+        c: "Recently widowed",
+        d: "Retiring",
+        e: "All is good now"
       },
-      correctAnswer: "c"
+      correctAnswer: "a",
+      buttonText: "Thanks for sharing!"
     },
     {
-      question: "Which tool can you use to ensure code quality?",
+      question: "You know how much you make, but do you know how much you save?",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: "Under 5%",
+        b: "Between 5% - 10%",
+        c: "Between 10% - 20%",
+        d: "Over 20%",
+        e: "I don't know"
       },
-      correctAnswer: "d"
+      correctAnswer: "a",
+      buttonText: "Let's keep going!"
+    },
+    {
+      question: "What are your main financial concerns? Check all that apply:",
+      answers: {
+        a: "Running out of money",
+        b: "Leaving a legacy",
+        c: "Market volatility",
+        d: "Being able to retire",
+        e: "Medical costs"
+      },
+      correctAnswer: "a",
+      buttonText: "Thanks for the insights!"
+    },
+    {
+      question: "What is your current level of investable assets?",
+      answers: {
+        a: "$0 - $500K",
+        b: "$500K - $1MM",
+        c: "$1MM - $2MM",
+        d: "$2MM - $5MM",
+        e: "$5MM+"
+      },
+      correctAnswer: "a",
+      buttonText: "Let's Keep it Growing!"
+    },
+    {
+      question: "How often do you and your financial advisor communicate?",
+      answers: {
+        a: "I don't have one",
+        b: "Rarely, if ever",
+        c: "Once a year",
+        d: "2-3 times a year",
+        e: "4+ times a year"
+      },
+      correctAnswer: "a",
+      buttonText: "We can help!"
+    },
+    {
+      question: "How often do you update your financial plan?",
+      answers: {
+        a: "I don't have one",
+        b: "Rarely, if ever",
+        c: "Once a year",
+        d: "2-3 times a year",
+        e: "4+ times a year"
+      },
+      correctAnswer: "a",
+      buttonText: "We're here to help!"
+    },
+    {
+      question: "When was the last time you reviewed your Estate Plan?",
+      answers: {
+        a: "I don't have one",
+        b: "I just have a will",
+        c: "A review is in order",
+        d: "Reviewed last year",
+        e: "Reviewed recently"
+      },
+      correctAnswer: "a",
+      buttonText: "Put house in order!"
+    },
+    {
+      question: "Are your investments aligned to your financial freedom goals?",
+      answers: {
+        a: "I am not sure",
+        b: "I think so",
+        c: "Yes, they are",
+        d: "No, they are not"
+      },
+      correctAnswer: "a",
+      buttonText: "Almost finished!"
     }
 ];
   
