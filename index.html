@@ -19,39 +19,43 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/particles.css">
 
     <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
 
     <header>
-        <div id="header-left">
-            <div id="hamburer-menu">
-                <svg viewBox="0 0 100 80" width="40" height="40">
+        <div id="header-inner">
+            <div id="header-left">
+                <div id="hamburger-menu">
+                    <svg viewBox="0 0 100 80" width="40" height="40">
                   <rect width="100" height="20" rx="8"></rect>
                   <rect y="30" width="100" height="20" rx="8"></rect>
                   <rect y="60" width="100" height="20" rx="8"></rect>
                 </svg>
+                </div>
+                <div id="logo">
+                    <img src="img/HCR-Logo.png">
+                </div>
             </div>
-            <div id="logo">
-                <img src="img/HCR-Logo.png">
+            <div id="header-center">
+                <div id="circle-icon">
+                    <img src="img/HCR-Circle-Icon.png">
+                </div>
             </div>
-        </div>
-        <div id="header-center">
-            <div id="circle-icon">
-                <img src="img/HCR-Circle-Icon.png">
-            </div>
-        </div>
-        <div id="header-right">
-            <div id="refresh-icon">
-                <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw">
+            <div id="header-right">
+                <div id="refresh-icon">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw">
                 <polyline points="1 4 1 10 7 10"/>
                 <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
               </svg>
-            </div>
-            <div id="help-icon">
-                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                </div>
+                <div id="help-icon">
+                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                     <g id="Outlined" transform="translate(-782.000000, -288.000000)">
                         <g id="Action" transform="translate(100.000000, 100.000000)">
@@ -65,27 +69,34 @@
                     </g>
                 </g>
             </svg>
+                </div>
             </div>
         </div>
     </header>
 
-    <h1>Financial Freedom Quiz</h1>
-
     <div class="quiz-container">
         <div id="quiz"></div>
+        <button id="next">Next Question</button>
+        <button id="submit">Submit Quiz</button>
     </div>
-    <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
-    <button id="submit">Submit Quiz</button>
     <div id="results"></div>
 
 
-    <p class="disclaimer">(This quiz is in BETA)</p>
+    <!-- PARTICLE EFFECTS -->
+
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+
+
 
     <!-- Scripts -->
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/quiz.js"></script>
+    <script src="js/particles.js"></script>
 </body>
 
 </html>

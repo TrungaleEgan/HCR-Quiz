@@ -1,13 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
 header {
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 2px solid black;
+    margin: 0px auto;
+    background: white;
+}
+
+#header-inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 20px 10px;
-    border-bottom: 2px solid black;
-    margin-bottom: 160px;
+    width: 95%;
+    margin: 0px auto;
+    padding: 20px 0px;
 }
 
 #header-left {
@@ -41,10 +48,18 @@ header {
 
 #circle-icon {
     position: absolute;
-    top: 10px;
+    top: 50px;
     background-color: white;
     border: 10px solid white;
     border-radius: 50%;
+}
+
+#hamburger-menu,
+#logo,
+#refresh-icon,
+#help-icon {
+    cursor: pointer;
+    padding: 5px;
 }
 
 body {
@@ -56,29 +71,39 @@ body {
     background-color: white;
 }
 
-h1 {
-    font-weight: 300;
-    margin: 0px;
-    padding: 10px;
-    font-size: 34px;
-    background-color: #444;
-    color: #fff;
+.title {
+    font-weight: bold;
+    font-size: 4em;
+    color: #236192;
+    margin-bottom: 20px;
+}
+
+.icon {
+    margin-bottom: 40px;
 }
 
 .question {
     font-size: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 
 .answers {
-    margin-bottom: 20px;
     text-align: left;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
 }
 
 .answers label {
     display: block;
-    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 2px;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
 }
 
 button {
@@ -117,7 +142,6 @@ button:hover {
     z-index: 1;
     opacity: 0;
     transition: opacity 0.2s;
-    outline: 1px solid pink;
 }
 
 .active-slide {
@@ -127,7 +151,10 @@ button:hover {
 
 .quiz-container {
     position: relative;
-    height: 300px;
-    margin: 40px auto;
-    outline: 3px solid red;
+    height: auto;
+    margin: 15vh auto;
+}
+
+#quiz {
+    height: 50vh;
 }
