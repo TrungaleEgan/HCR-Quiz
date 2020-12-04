@@ -2,47 +2,90 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/quiz.css">
 
-  <meta name="theme-color" content="#fafafa">
+    <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <h1>Financial Freedom Quiz</h1>
-  
-  <div class="quiz-container">
-    <div id="quiz"></div>
-  </div>
-  <button id="previous">Previous Question</button>
-  <button id="next">Next Question</button>
-  <button id="submit">Submit Quiz</button>
-  <div id="results"></div>
-  
+    <header>
+        <div id="header-left">
+            <div id="hamburer-menu">
+                <svg viewBox="0 0 100 80" width="40" height="40">
+                  <rect width="100" height="20" rx="8"></rect>
+                  <rect y="30" width="100" height="20" rx="8"></rect>
+                  <rect y="60" width="100" height="20" rx="8"></rect>
+                </svg>
+            </div>
+            <div id="logo">
+                <img src="img/HCR-Logo.png">
+            </div>
+        </div>
+        <div id="header-center">
+            <div id="circle-icon">
+                <img src="img/HCR-Circle-Icon.png">
+            </div>
+        </div>
+        <div id="header-right">
+            <div id="refresh-icon">
+                <svg width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rotate-ccw">
+                <polyline points="1 4 1 10 7 10"/>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+              </svg>
+            </div>
+            <div id="help-icon">
+                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Outlined" transform="translate(-782.000000, -288.000000)">
+                        <g id="Action" transform="translate(100.000000, 100.000000)">
+                            <g id="Outlined-/-Action-/-help_outline" transform="translate(680.000000, 186.000000)">
+                                <g>
+                                    <polygon id="Path" points="0 0 24 0 24 24 0 24"/>
+                                    <path d="M11,18 L13,18 L13,16 L11,16 L11,18 Z M12,2 C6.48,2 2,6.48 2,12 C2,17.52 6.48,22 12,22 C17.52,22 22,17.52 22,12 C22,6.48 17.52,2 12,2 Z M12,20 C7.59,20 4,16.41 4,12 C4,7.59 7.59,4 12,4 C16.41,4 20,7.59 20,12 C20,16.41 16.41,20 12,20 Z M12,6 C9.79,6 8,7.79 8,10 L10,10 C10,8.9 10.9,8 12,8 C13.1,8 14,8.9 14,10 C14,12 11,11.75 11,15 L13,15 C13,12.75 16,12.5 16,10 C16,7.79 14.21,6 12,6 Z" id="🔹-Icon-Color" fill="#1D1D1D"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            </div>
+        </div>
+    </header>
 
-  <p class="disclaimer">(This quiz is in BETA)</p>
-  
-  <!-- Scripts -->
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/quiz.js"></script>
+    <h1>Financial Freedom Quiz</h1>
+
+    <div class="quiz-container">
+        <div id="quiz"></div>
+    </div>
+    <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+
+
+    <p class="disclaimer">(This quiz is in BETA)</p>
+
+    <!-- Scripts -->
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/quiz.js"></script>
 </body>
 
 </html>
