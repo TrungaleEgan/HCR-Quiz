@@ -202,7 +202,7 @@ button:hover {
     display: flex;
     font-size: 1em;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 50%;
     margin: 40px auto;
