@@ -58,10 +58,14 @@ header {
 
 #circle-icon {
     position: absolute;
-    top: 50px;
+    top: 72px;
     background-color: white;
     border: 10px solid white;
     border-radius: 50%;
+}
+
+#hamburger-menu rect {
+    fill: #333;
 }
 
 #hamburger-menu,
@@ -76,7 +80,6 @@ header {
 /*** BODY ***/
 
 body {
-    font-size: 20px;
     font-family: 'Work Sans', sans-serif;
     color: #333;
     font-weight: 300;
@@ -86,7 +89,7 @@ body {
 
 .title {
     font-weight: bold;
-    font-size: 4em;
+    font-size: clamp(2rem, 6vw, 6rem);
     color: #236192;
     margin-bottom: 20px;
 }
@@ -96,13 +99,14 @@ body {
 }
 
 .question {
-    font-size: 30px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 40px;
 }
 
 .answers {
     text-align: left;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 40px;
@@ -113,7 +117,7 @@ body {
     padding: 10px;
     border: 2px solid black;
     border-radius: 3px;
-    font-size: 0.7em;
+    font-size: clamp(.8rem, 1.2vw, 1rem);
     font-weight: bold;
     text-transform: uppercase;
     margin: 10px;
@@ -193,7 +197,7 @@ button:hover {
 
 #questionNav {
     display: flex;
-    font-size: ;
+    font-size: 1em;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -233,3 +237,28 @@ button:hover {
     font-weight: bold;
     transition: 0.2s;
 }
+
+/*** RESULTS ***/
+#results {
+    width: 70%;
+    border: 8px solid grey;
+    padding: 40px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50vh;
+  }
+  
+  .resultQuestionContainer {
+    width: 30%;
+    margin: 20px auto;
+    font-size: clamp(.7rem, 2.5vw, 1rem);
+    text-align: left;
+  }
+  
+  .userAnswerContainer {
+    font-weight: bold;
+    background: #8d8d8d7a;
+  }
+  
