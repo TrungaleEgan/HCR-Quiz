@@ -91,7 +91,7 @@
                 // color the answers red
                 answerContainers[questionNumber].style.color = 'red';
                 userSummary.push(
-                    `<div class="userAnswerContainer">${questionNumber + 1}: N/A</div>`
+                    `<div class="userAnswerContainer">${questionNumber + 1}: n/a</div>`
                 );
             }
         });
