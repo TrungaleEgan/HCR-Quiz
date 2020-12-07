@@ -189,7 +189,7 @@ button:hover {
 }
 
 #quiz {
-    height: 50vh;
+    height: 450px;
 }
 
 
@@ -238,7 +238,9 @@ button:hover {
     transition: 0.2s;
 }
 
+
 /*** RESULTS ***/
+
 #results {
     width: 70%;
     border: 8px solid grey;
@@ -248,17 +250,16 @@ button:hover {
     flex-direction: column;
     flex-wrap: wrap;
     height: 50vh;
-  }
-  
-  .resultQuestionContainer {
+}
+
+.resultQuestionContainer {
     width: 30%;
     margin: 20px auto;
     font-size: clamp(.7rem, 2.5vw, 1rem);
     text-align: left;
-  }
-  
-  .userAnswerContainer {
+}
+
+.userAnswerContainer {
     font-weight: bold;
     background: #8d8d8d7a;
-  }
-  
+}
