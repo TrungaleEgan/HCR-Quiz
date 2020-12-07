@@ -80,7 +80,8 @@
                 // add to the number of answers
                 numCorrect++;
                 userSummary.push(
-                    `<div class="userAnswerContainer">${questionNumber + 1}: ${userAnswer}</div>`
+                    `<div class="resultQuestionContainer">${questionNumber + 1}: ${currentQuestion.question}<br />
+                    <div class="userAnswerContainer">${userAnswer}</div></div>`
                 );
 
                 // color the answer green
@@ -91,7 +92,8 @@
                 // color the answers red
                 answerContainers[questionNumber].style.color = 'red';
                 userSummary.push(
-                    `<div class="userAnswerContainer">${questionNumber + 1}: n/a</div>`
+                    `<div class="resultQuestionContainer">${questionNumber + 1}:  ${currentQuestion.question}<br />
+                    <div class="userAnswerContainer">n/a</div></div>`
                 );
             }
         });

@@ -242,14 +242,18 @@ button:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 50vh;
+    height: 50vh;
+  }
+  
+  .resultQuestionContainer {
+    width: 30%;
+    margin: 20px auto;
+    font-size: clamp(.7rem, 2.5vw, 1rem);
+    text-align: left;
   }
   
   .userAnswerContainer {
-    width: 40%;
-    margin: 20px auto;
     font-weight: bold;
-    font-size: clamp(1rem, 2.5vw, 2rem);
-    text-align: left;
+    background: #8d8d8d7a;
   }
   
