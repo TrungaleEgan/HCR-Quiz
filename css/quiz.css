@@ -64,6 +64,10 @@ header {
     border-radius: 50%;
 }
 
+#hamburger-menu rect {
+    fill: #333;
+}
+
 #hamburger-menu,
 #logo,
 #refresh-icon,
