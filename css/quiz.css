@@ -209,6 +209,12 @@ button:hover {
     width: 1.5em;
     height: 1.5em;
     color: gray;
+    cursor: pointer;
+}
+
+.navNumber:hover {
+    color: black;
+    transition: .2s;
 }
 
 .active-number {

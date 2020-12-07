@@ -92,6 +92,7 @@
         slides[n].classList.add('active-slide');
         numbers[n].classList.add('active-number');
         currentSlide = n;
+        nextButton.innerHTML = myQuestions[n].buttonText;
         if (currentSlide === slides.length - 1) {
             nextButton.style.display = 'none';
             submitButton.style.display = 'inline-block';
@@ -250,5 +251,12 @@
     nextButton.addEventListener("click", showNextSlide);
     refreshButton.addEventListener("click", reloadQuiz);
 
+    numbers.forEach(
+        (currentNumber, numberIndex) => {
+            currentNumber.addEventListener("click", function() {
+                showSlide(numberIndex);
+            })
+        }
+    );
 
 })();
