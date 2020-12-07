@@ -145,7 +145,7 @@ button {
 button:hover {
     background-color: #236292de;
     transform: scale(110%);
-    transition: .2s;
+    transition: all .2s;
 }
 
 .disclaimer {
@@ -201,12 +201,14 @@ button:hover {
 }
 
 #questionNavText {
+    margin: 0rem 0.5rem;
     color: gray;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 #questionNavNumbers {
+    margin: 0rem 0.5rem;
     display: flex;
     flex-direction: revert;
     justify-content: space-between;
@@ -214,7 +216,7 @@ button:hover {
 }
 
 .navNumber {
-    margin-right: 5px;
+    margin: 0rem 0.5rem;
     line-height: 1.5em;
     width: 1.5em;
     height: 1.5em;
