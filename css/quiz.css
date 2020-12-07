@@ -126,7 +126,11 @@ body {
 
 .answers label:hover {
     transform: scale(110%);
-    transition: .2s;
+    -ms-transform: scale(110%);
+    -o-transform: scale(110%);
+    -moz-transform: scale(110%);
+    -webkit-transform: scale(110%);
+    transition: all .2s;
 }
 
 button {
@@ -145,6 +149,10 @@ button {
 button:hover {
     background-color: #236292de;
     transform: scale(110%);
+    -ms-transform: scale(110%);
+    -o-transform: scale(110%);
+    -moz-transform: scale(110%);
+    -webkit-transform: scale(110%);
     transition: all .2s;
 }
 
@@ -184,7 +192,7 @@ button:hover {
 }
 
 #quiz {
-    height: 50vh;
+    height: 450px;
 }
 
 
@@ -235,7 +243,9 @@ button:hover {
     transition: 0.2s;
 }
 
+
 /*** RESULTS ***/
+
 #results {
     width: 70%;
     border: 8px solid grey;
@@ -245,17 +255,16 @@ button:hover {
     flex-direction: column;
     flex-wrap: wrap;
     height: 50vh;
-  }
-  
-  .resultQuestionContainer {
+}
+
+.resultQuestionContainer {
     width: 30%;
     margin: 20px auto;
     font-size: clamp(.7rem, 2.5vw, 1rem);
     text-align: left;
-  }
-  
-  .userAnswerContainer {
+}
+
+.userAnswerContainer {
     font-weight: bold;
     background: #8d8d8d7a;
-  }
-  
+}

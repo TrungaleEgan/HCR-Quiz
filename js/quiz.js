@@ -58,6 +58,7 @@
         numbers[currentSlide].classList.remove('active-number');
 
         outerquizContainer.classList.add('hidden');
+        resultsContainer.classList.remove('hidden');
 
 
         // gather answer containers from our quiz
