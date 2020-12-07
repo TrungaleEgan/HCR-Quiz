@@ -122,6 +122,8 @@ body {
 
 .answers label:hover {
     transform: scale(110%);
+    -ms-transform: scale(110%);
+    -webkit-transform: scale(110%);
     transition: .2s;
 }
 
@@ -140,6 +142,9 @@ button {
 
 button:hover {
     background-color: #236292de;
+    transform: scale(110%);
+    -ms-transform: scale(110%);
+    -webkit-transform: scale(110%);
     transform: scale(110%);
     transition: .2s;
 }
