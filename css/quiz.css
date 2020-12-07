@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+.hidden {
+    display: none;
+}
+
 
 /*** HEADER ***/
 
@@ -167,10 +171,12 @@ button:hover {
     z-index: 2;
 }
 
-.quiz-container {
+.quiz-container,
+#results {
     position: relative;
     height: auto;
     margin: 15vh auto;
+    transition: .5s;
 }
 
 #quiz {

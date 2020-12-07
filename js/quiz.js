@@ -53,11 +53,19 @@
 
     function showResults() {
 
+        // hide slides
+        slides[currentSlide].classList.remove('active-slide');
+        numbers[currentSlide].classList.remove('active-number');
+
+        outerquizContainer.classList.add('hidden');
+
+
         // gather answer containers from our quiz
         const answerContainers = quizContainer.querySelectorAll('.answers');
 
         // keep track of user's answers
         let numCorrect = 0;
+        const userSummary = [];
 
         // for each question...
         myQuestions.forEach((currentQuestion, questionNumber) => {
@@ -67,23 +75,30 @@
             const selector = `input[name=question${questionNumber}]:checked`;
             const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-            // if answer is correct
-            if (userAnswer === currentQuestion.correctAnswer) {
-                // add to the number of correct answers
+            // if answer exists
+            if (userAnswer) {
+                // add to the number of answers
                 numCorrect++;
+                userSummary.push(
+                    `<div class="userAnswerContainer">${questionNumber + 1}: ${userAnswer}</div>`
+                );
 
-                // color the answers green
+                // color the answer green
                 answerContainers[questionNumber].style.color = 'lightgreen';
             }
             // if answer is wrong or blank
             else {
                 // color the answers red
                 answerContainers[questionNumber].style.color = 'red';
+                userSummary.push(
+                    `<div class="userAnswerContainer">${questionNumber + 1}: N/A</div>`
+                );
             }
         });
 
         // show number of correct answers out of total
-        resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        resultsContainer.innerHTML = userSummary.join('');
     }
 
     function showSlide(n) {
@@ -111,6 +126,7 @@
     }
 
     // VARIABLES
+    const outerquizContainer = document.getElementsByClassName('quiz-container')[0];
     const quizContainer = document.getElementById('quiz');
     const questionNavNumbersContainer = document.getElementById('questionNavNumbers');
     const resultsContainer = document.getElementById('results');
