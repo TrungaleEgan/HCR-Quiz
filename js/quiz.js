@@ -4,6 +4,7 @@
     function buildQuiz() {
         // variable to store the HTML output
         const output = [];
+        const questionNavOutput = [];
 
         // for each question...
         myQuestions.forEach(
@@ -33,11 +34,21 @@
                         <div class="answers"> ${answers.join("")} </div>
                     </div>`
                 );
+
+                // add new navigation number
+                questionNavOutput.push(
+                    `<div class="navNumber" id="${questionNumber + 1}">${questionNumber + 1}</div>`
+                )
             }
         );
 
         // finally combine our output list into one string of HTML and put it on the page
         quizContainer.innerHTML = output.join('');
+
+
+
+        // Build Question Nav
+        questionNavNumbersContainer.innerHTML = questionNavOutput.join('');
     }
 
     function showResults() {
@@ -77,7 +88,9 @@
 
     function showSlide(n) {
         slides[currentSlide].classList.remove('active-slide');
+        numbers[currentSlide].classList.remove('active-number');
         slides[n].classList.add('active-slide');
+        numbers[n].classList.add('active-number');
         currentSlide = n;
         if (currentSlide === slides.length - 1) {
             nextButton.style.display = 'none';
@@ -98,6 +111,7 @@
 
     // VARIABLES
     const quizContainer = document.getElementById('quiz');
+    const questionNavNumbersContainer = document.getElementById('questionNavNumbers');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const refreshButton = document.getElementById('refresh-icon');
@@ -225,8 +239,8 @@
     // PAGINATION
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
+    const numbers = document.querySelectorAll(".navNumber");
     let currentSlide = 0;
-
 
     // SHOW FIRST SLIDE
     showSlide(currentSlide);
@@ -235,5 +249,6 @@
     submitButton.addEventListener('click', showResults);
     nextButton.addEventListener("click", showNextSlide);
     refreshButton.addEventListener("click", reloadQuiz);
+
 
 })();
