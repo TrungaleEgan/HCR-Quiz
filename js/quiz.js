@@ -29,7 +29,7 @@
                 output.push(
                     `<div class="slide">
                         <div class="title"> ${currentQuestion.title} </div>
-                        <div class="icon"> </div>
+                        <div class="icon"> <img alt="${currentQuestion.title}" src="${currentQuestion.icon}"> </div>
                         <div class="question"> ${currentQuestion.question} </div>
                         <div class="answers"> ${answers.join("")} </div>
                     </div>`
@@ -138,6 +138,7 @@
     // QUIZ QUESTIONS
     const myQuestions = [{
             title: "Current Employment",
+            icon: "img/icons/employment.png",
             question: "What is your current employment status?",
             answers: {
                 a: "Unemployed",
@@ -150,6 +151,7 @@
         },
         {
             title: "Significant Life Event",
+            icon: "img/icons/life-event.png",
             question: "Are you currently going through or anticipating a significant life event?",
             answers: {
                 a: "Selling a business",
@@ -163,6 +165,7 @@
         },
         {
             title: "Current Savings Rate",
+            icon: "img/icons/savings-income.png",
             question: "You know how much you make, but do you know how much you save?",
             answers: {
                 a: "Under 5%",
@@ -176,6 +179,7 @@
         },
         {
             title: "Financial Concerns",
+            icon: "img/icons/financial-concerns.png",
             question: "What are your main financial concerns? Check all that apply:",
             answers: {
                 a: "Running out of money",
@@ -189,6 +193,7 @@
         },
         {
             title: "Investable Assets",
+            icon: "img/icons/investable-assets.png",
             question: "What is your current level of investable assets?",
             answers: {
                 a: "$0 - $500K",
@@ -202,6 +207,7 @@
         },
         {
             title: "Financial Advice",
+            icon: "img/icons/financial-advisor.png",
             question: "How often do you and your financial advisor communicate?",
             answers: {
                 a: "I don't have one",
@@ -215,6 +221,7 @@
         },
         {
             title: "Financial Plan",
+            icon: "img/icons/financial-plan.png",
             question: "How often do you update your financial plan?",
             answers: {
                 a: "I don't have one",
@@ -228,6 +235,7 @@
         },
         {
             title: "Estate Planning",
+            icon: "img/icons/estate-plan.png",
             question: "When was the last time you reviewed your Estate Plan?",
             answers: {
                 a: "I don't have one",
@@ -241,6 +249,7 @@
         },
         {
             title: "Financial Freedom",
+            icon: "img/icons/financial-freedom.png",
             question: "Are your investments aligned to your financial freedom goals?",
             answers: {
                 a: "I am not sure",

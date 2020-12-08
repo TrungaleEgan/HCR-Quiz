@@ -98,6 +98,10 @@ body {
     margin-bottom: 40px;
 }
 
+.icon img {
+    max-height: 100px;
+}
+
 .question {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 40px;
@@ -187,12 +191,12 @@ button:hover {
 #results {
     position: relative;
     height: auto;
-    margin: 15vh auto;
+    margin: 40px auto;
     transition: .5s;
 }
 
 #quiz {
-    height: 450px;
+    height: 500px;
 }
 
 
