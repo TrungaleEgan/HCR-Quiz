@@ -65,7 +65,7 @@
         const answerContainers = quizContainer.querySelectorAll('.answers');
 
         // keep track of user's answers
-        let numCorrect = 0;
+        let userScore = 0;
         const userSummary = [];
 
         // for each question...
@@ -78,17 +78,17 @@
 
             // if answer exists
             if (userAnswer) {
-                // add to the number of answers
-                numCorrect++;
+                // add score
+                const userAnswerKey = (answerContainer.querySelector(selector)).name;
+                userScore = userScore + currentQuestion.scores[userAnswerKey];
+
                 userSummary.push(
                     `<div class="resultQuestionContainer">${questionNumber + 1}: ${currentQuestion.question}<br />
                     <div class="userAnswerContainer">${userAnswer}</div></div>`
                 );
 
-                // color the answer green
-                answerContainers[questionNumber].style.color = 'lightgreen';
             }
-            // if answer is wrong or blank
+            // if answer is blank
             else {
                 // color the answers red
                 answerContainers[questionNumber].style.color = 'red';
@@ -98,6 +98,10 @@
                 );
             }
         });
+
+        userSummary.push(
+            `<div class="userScore">Score: ${userScore}</div>`
+        )
 
         // show number of correct answers out of total
         // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
@@ -146,6 +150,12 @@
                 c: "Business owner",
                 d: "Retired"
             },
+            scores: {
+                "Unemployed": 4.5,
+                "Employed": 5.5,
+                "Business owner": 7,
+                "Retired": 6
+            },
             correctAnswer: "a",
             buttonText: "Let's keep going!"
         },
@@ -159,6 +169,13 @@
                 c: "Recently widowed",
                 d: "Retiring",
                 e: "All is good now"
+            },
+            scores: {
+                "Selling a business": 10,
+                "Recently divorced": 7.5,
+                "Recently widowed": 8,
+                "Retiring": 10,
+                "All is good now": 9
             },
             correctAnswer: "a",
             buttonText: "Thanks for sharing!"
@@ -174,6 +191,13 @@
                 d: "Over 20%",
                 e: "I don't know"
             },
+            scores: {
+                "Under 5%": 8.5,
+                "Between 5% - 10%": 9,
+                "Between 10% - 20%": 10,
+                "Over 20%": 12,
+                "I don't know": 8.5
+            },
             correctAnswer: "a",
             buttonText: "Let's keep going!"
         },
@@ -187,6 +211,13 @@
                 c: "Market volatility",
                 d: "Being able to retire",
                 e: "Medical costs"
+            },
+            scores: {
+                "Running out of money": 4.5,
+                "Leaving a legacy": 5,
+                "Market volatility": 6,
+                "Being able to retire": 5,
+                "Medical costs": 4.5
             },
             correctAnswer: "a",
             buttonText: "Thanks for the insights!"
@@ -202,6 +233,13 @@
                 d: "$2MM - $5MM",
                 e: "$5MM+"
             },
+            scores: {
+                "$0 - $500K": 10,
+                "$500K - $1MM": 11,
+                "$1MM - $2MM": 12,
+                "$2MM - $5MM": 13,
+                "$5MM+": 14
+            },
             correctAnswer: "a",
             buttonText: "Let's Keep it Growing!"
         },
@@ -215,6 +253,13 @@
                 c: "Once a year",
                 d: "2-3 times a year",
                 e: "4+ times a year"
+            },
+            scores: {
+                "I don't have one": 6.5,
+                "Rarely, if ever": 7,
+                "Once a year": 7.5,
+                "2-3 times a year": 8,
+                "4+ times a year": 9
             },
             correctAnswer: "a",
             buttonText: "We can help!"
@@ -230,6 +275,13 @@
                 d: "2-3 times a year",
                 e: "4+ times a year"
             },
+            scores: {
+                "I don't have one": 6.5,
+                "Rarely, if ever": 7,
+                "Once a year": 7.5,
+                "2-3 times a year": 8,
+                "4+ times a year": 9
+            },
             correctAnswer: "a",
             buttonText: "We're here to help!"
         },
@@ -244,6 +296,13 @@
                 d: "Reviewed last year",
                 e: "Reviewed recently"
             },
+            scores: {
+                "I don't have one": 6.5,
+                "I just have a will": 7,
+                "A review is in order": 7.5,
+                "Reviewed last year": 8,
+                "Reviewed recently": 9
+            },
             correctAnswer: "a",
             buttonText: "Put house in order!"
         },
@@ -256,6 +315,12 @@
                 b: "I think so",
                 c: "Yes, they are",
                 d: "No, they are not"
+            },
+            scores: {
+                "I am not sure": 5.5,
+                "I think so": 7,
+                "Yes, they are": 8,
+                "No, they are not": 6
             },
             correctAnswer: "a",
             buttonText: "Almost finished!"

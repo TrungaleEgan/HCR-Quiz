@@ -7,11 +7,15 @@
 /*** HEADER ***/
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 20px 0px;
     border-bottom: 2px solid black;
     margin: 0px auto;
     background: white;
+    height: 10vh;
+    margin-bottom: 10vh;
 }
 
 #header-inner {
@@ -21,7 +25,6 @@ header {
     align-items: center;
     width: 95%;
     margin: 0px auto;
-    padding: 20px 0px;
 }
 
 #header-left {
@@ -29,7 +32,7 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 25%;
+    width: 30%;
 }
 
 #header-center {
@@ -37,7 +40,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 60%;
 }
 
 #header-right {
@@ -45,20 +48,17 @@ header {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: 25%;
+    width: 30%;
 }
 
 #logo img {
     max-width: 200px;
 }
 
-#circle-icon img {
-    max-width: 120px;
-}
-
 #circle-icon {
-    position: absolute;
-    top: 72px;
+    max-width: 100px;
+    position: relative;
+    top: 5vh;
     background-color: white;
     border: 10px solid white;
     border-radius: 50%;
@@ -73,7 +73,7 @@ header {
 #refresh-icon,
 #help-icon {
     cursor: pointer;
-    padding: 5px;
+    margin: 0px 10px;
 }
 
 .tooltip {
@@ -118,13 +118,12 @@ body {
 
 .title {
     font-weight: bold;
-    font-size: clamp(2rem, 6vw, 6rem);
+    font-size: clamp(1.5rem, 6vw, 5rem);
     color: #236192;
-    margin-bottom: 20px;
 }
 
 .icon {
-    margin-bottom: 40px;
+    text-align: center;
 }
 
 .icon img {
@@ -132,8 +131,8 @@ body {
 }
 
 .question {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    margin-bottom: 40px;
+    font-size: clamp(1rem, 5vw, 2rem);
+    margin: 40px auto;
 }
 
 .answers {
@@ -142,7 +141,6 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 40px;
 }
 
 .answers label {
@@ -150,7 +148,7 @@ body {
     padding: 10px;
     border: 2px solid black;
     border-radius: 3px;
-    font-size: clamp(.8rem, 1.2vw, 1rem);
+    font-size: clamp(.6rem, 1.2vw, 1rem);
     font-weight: bold;
     text-transform: uppercase;
     margin: 10px;
@@ -176,7 +174,7 @@ button {
     border-radius: 5px;
     padding: 15px 40px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 
 button:hover {
@@ -219,13 +217,15 @@ button:hover {
 .quiz-container,
 #results {
     position: relative;
-    height: auto;
-    margin: 40px auto;
     transition: .5s;
 }
 
-#quiz {
-    height: 500px;
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 
@@ -237,8 +237,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: 40px auto;
+    margin: 20px auto;
 }
 
 #questionNavText {
@@ -287,7 +286,8 @@ button:hover {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 50vh;
+    height: 80vh;
+    margin: 0px auto;
 }
 
 .resultQuestionContainer {
@@ -300,4 +300,28 @@ button:hover {
 .userAnswerContainer {
     font-weight: bold;
     background: #8d8d8d7a;
+}
+
+
+/*** MEDIA QUERIES ***/
+
+@media only screen and (max-width: 500px) {
+    header {
+        margin-bottom: 5vh;
+    }
+    #circle-icon {
+        max-width: 60px;
+    }
+    .quiz-container {
+        height: 85vh;
+    }
+    .icon img {
+        max-height: 50px;
+    }
+    .answers label {
+        margin: 5px;
+    }
+    .question {
+        margin: 0px auto;
+    }
 }
