@@ -75,7 +75,49 @@
         </div>
     </header>
 
-    <div class="quiz-container">
+    <div id="form-container">
+        <div class="h1-container">
+            <h1>Financial Freedom<br />
+                <span class="h1-grey">Review</span><img id="clarity-formula-logo" src="img/Clarity-Formula-Logo.png" alt="The Clarity Formula"></h1>
+        </div>
+
+        <div class="question">Let's define what financial freedom means to you and help you achieve it!</div>
+
+        <div id="form-1" class="">
+            <div class="question">We'll start by getting to know you a bit better...please tell us your name.</div>
+            <div class="formFields">
+                <input type="text" onfocus="this.value=''" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" onfocus="this.value=''" id="lastName" name="lastName" placeholder="Last Name" required>
+                <input type="email" onfocus="this.value=''" id="emailAddress" name="emailAddress" placeholder="Email Address" required>
+            </div>
+            <input id="form-1-submit" type="submit" value="Nice to Meet You!">
+        </div>
+
+        <div id="form-2" class="hidden">
+            <div class="question">Please tell us your age range. Knowing your time horizon is essential to planning!</div>
+            <div class="answers">
+                <label>
+                    <input type="radio" name="age" value="21-35 Years">
+                    21-35 Years
+                </label>
+                <label>
+                    <input type="radio" name="age" value="36-50 Years">
+                    36-50 Years
+                </label>
+                <label>
+                    <input type="radio" name="age" value="51-65 Years">
+                    51-65 Years
+                </label>
+                <label>
+                    <input type="radio" name="age" value="65+ Years">
+                    65+ Years
+                </label>
+            </div>
+            <input id="form-2-submit" type="submit" value="Young at Heart!">
+        </div>
+    </div>
+
+    <div class="quiz-container hidden">
         <div id="quiz"></div>
         <button id="next">Let's Keep Going</button>
         <button id="submit">Almost Finished!</button>

@@ -116,6 +116,30 @@ body {
     background-color: white;
 }
 
+.h1-container {
+    width: max-content;
+    width: -moz-max-content;
+    margin: 0px auto;
+}
+
+h1 {
+    color: #236192;
+    font-size: clamp(1.5rem, 6vw, 5rem);
+    font-weight: normal;
+    text-align: justify;
+    line-height: 1em;
+}
+
+.h1-grey {
+    color: grey;
+    text-transform: uppercase;
+}
+
+#clarity-formula-logo {
+    max-width: 200px;
+    padding: 20px;
+}
+
 .title {
     font-weight: bold;
     font-size: clamp(1.5rem, 6vw, 5rem);
@@ -135,7 +159,8 @@ body {
     margin: 40px auto;
 }
 
-.answers {
+.answers,
+.formFields {
     text-align: left;
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +168,8 @@ body {
     justify-content: center;
 }
 
-.answers label {
+.answers label,
+.formFields input {
     display: block;
     padding: 10px;
     border: 2px solid black;
@@ -155,6 +181,12 @@ body {
     cursor: pointer;
 }
 
+.formFields input {
+    padding: 10px;
+    width: 200px;
+    color: black;
+}
+
 .answers label:hover {
     transform: scale(110%);
     -ms-transform: scale(110%);
@@ -164,7 +196,9 @@ body {
     transition: all .2s;
 }
 
-button {
+button,
+#form-1-submit,
+#form-2-submit {
     font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
@@ -177,7 +211,9 @@ button {
     margin: 20px auto;
 }
 
-button:hover {
+button:hover,
+#form-1-submit:hover,
+#form-2-submit:hover {
     background-color: #236292de;
     transform: scale(110%);
     -ms-transform: scale(110%);

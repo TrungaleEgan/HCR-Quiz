@@ -132,7 +132,15 @@
         location.reload();
     }
 
-    // VARIABLES
+    // VARIABLES - FORM
+    const formContainer = document.getElementById('form-container');
+    const firstFormContainer = document.getElementById('form-1');
+    const secondFormContainer = document.getElementById('form-2');
+    const firstFormSubmitButton = document.getElementById('form-1-submit');
+    const secondFormSubmitButton = document.getElementById('form-2-submit');
+
+
+    // VARIABLES - QUIZ
     const outerquizContainer = document.getElementsByClassName('quiz-container')[0];
     const quizContainer = document.getElementById('quiz');
     const questionNavNumbersContainer = document.getElementById('questionNavNumbers');
@@ -351,5 +359,15 @@
             })
         }
     );
+
+    firstFormSubmitButton.addEventListener("click", function() {
+        firstFormContainer.classList.add('hidden');
+        secondFormContainer.classList.remove('hidden');
+    });
+
+    secondFormSubmitButton.addEventListener("click", function() {
+        formContainer.classList.add('hidden');
+        outerquizContainer.classList.remove('hidden');
+    });
 
 })();
