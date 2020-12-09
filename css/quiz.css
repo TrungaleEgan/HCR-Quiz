@@ -40,7 +40,7 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 40%;
 }
 
 #header-right {
@@ -317,6 +317,10 @@ button:hover {
     }
     .icon img {
         max-height: 50px;
+    }
+    .answers {
+        flex-direction: column;
+        align-items: center;
     }
     .answers label {
         margin: 5px;
