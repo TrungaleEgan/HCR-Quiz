@@ -79,12 +79,13 @@
             // if answer exists
             if (userAnswer) {
                 // add score
-                const userAnswerKey = (answerContainer.querySelector(selector)).name;
-                userScore = userScore + currentQuestion.scores[userAnswerKey];
+                const userAnswerKey = (answerContainer.querySelector(selector)).value;
+                const thisScore = currentQuestion.scores[userAnswerKey];
+                userScore = userScore + thisScore;
 
                 userSummary.push(
                     `<div class="resultQuestionContainer">${questionNumber + 1}: ${currentQuestion.question}<br />
-                    <div class="userAnswerContainer">${userAnswer}</div></div>`
+                    <div class="userAnswerContainer">${userAnswer} (${thisScore})</div></div>`
                 );
 
             }
