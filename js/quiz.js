@@ -60,6 +60,10 @@
         outerquizContainer.classList.add('hidden');
         resultsContainer.classList.remove('hidden');
 
+        // gather form info
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const emailAddress = document.getElementById('emailAddress').value;
 
         // gather answer containers from our quiz
         const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -101,7 +105,9 @@
         });
 
         userSummary.push(
-            `<div class="userScore">Score: ${userScore}</div>`
+            `<div class="userInfo">Name: ${firstName} ${lastName}<br />
+                                    Email: ${emailAddress}</div>
+            <div class="userScore">Score: ${userScore}</div>`
         )
 
         // show number of correct answers out of total

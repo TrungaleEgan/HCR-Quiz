@@ -237,7 +237,7 @@ button:hover,
 
 .slide {
     position: absolute;
-    left: 0px;
+    left: 100%;
     top: 0px;
     width: 100%;
     z-index: 1;
@@ -246,6 +246,7 @@ button:hover,
 }
 
 .active-slide {
+    left: 0px;
     opacity: 1;
     z-index: 2;
 }
@@ -326,7 +327,9 @@ button:hover,
     margin: 0px auto;
 }
 
-.resultQuestionContainer {
+.resultQuestionContainer,
+.userInfo,
+.userScore {
     width: 30%;
     margin: 20px auto;
     font-size: clamp(.7rem, 2.5vw, 1rem);
