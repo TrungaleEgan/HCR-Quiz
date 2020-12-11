@@ -135,7 +135,7 @@
         userSummary.push(
             `<div class="userScoreContainer"><div class="userScoreText">Your Financial<br />Freedom Score is...</div>
             <div class="userScoreNumber lightblue">${userScore}</div></div></div>
-            <div class="userSummary">We're here to help you find the financial freedom you' re looking for in life. Interested in scheduling a no cost, no obligation meeting?</div>
+            <div class="userSummary">We're here to help you find the financial freedom you're looking for in life. Interested in scheduling a no cost, no obligation meeting?</div>
             <button class="meetingButton">Schedule a Meeting</button>
             <hr />
             <div class="userSummary"><strong>A click away!</strong> Your <span class="lightblue">Financial Freedom Report</span> is ready for your review, please confirm your email address... just to be sure!</div>
