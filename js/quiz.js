@@ -149,7 +149,7 @@
             </div>
             <div class="userSummary">
                 <div class="userSummaryHeader">Why Work With a CFP<sup>&reg;</sup>?<br />Trust. Knowledge. Expertise.</div>
-                Your <span class="lightblue">Financial Freedom</span> eserves a customized financial plan and the personalized service to help you reach your goals.
+                According to a Vanguard study, working with a financial advisor can result in a net portfolio return that’s 3% higher than DIY financial and investment planning.            
             </div>
             </div>
             <div class="center">

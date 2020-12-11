@@ -483,6 +483,10 @@ body {
     margin: 30px 0px;
 }
 
+.videoRow .userSummary {
+    font-size: 1.6rem;
+}
+
 .videoRow>div {
     width: 47%;
     display: inline-block;
