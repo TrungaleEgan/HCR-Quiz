@@ -13,15 +13,45 @@
                 // variable to store the list of possible answers
                 const answers = [];
 
-                // and for each available answer...
-                for (letter in currentQuestion.answers) {
-
-                    // ...add an HTML radio button
+                if (currentQuestion.type == "radio") {
+                    for (letter in currentQuestion.answers) {
+                        // ...add an HTML radio button
+                        answers.push(
+                            `<label>
+                                <input type="radio" name="question${questionNumber}" value="${currentQuestion.answers[letter]}">
+                                ${currentQuestion.answers[letter]}
+                            </label>`
+                        );
+                    }
+                } else if (currentQuestion.type == "checkbox") {
+                    for (letter in currentQuestion.answers) {
+                        // ... or a checkbox
+                        answers.push(
+                            `<label>
+                                <input type="checkbox" name="question${questionNumber}" value="${currentQuestion.answers[letter]}">
+                                ${currentQuestion.answers[letter]}
+                            </label>`
+                        );
+                    }
+                } else if (currentQuestion.type == "dropdown") {
+                    // ... or a dropdown
                     answers.push(
-                        `<label>
-                            <input type="radio" name="question${questionNumber}" value="${currentQuestion.answers[letter]}">
-                            ${currentQuestion.answers[letter]}
-                        </label>`
+                        `<div class="dropdownRow">
+                        <div class="dropdownCol">
+                        <select name="question${questionNumber}" id="assetsDropdown">`
+                    );
+                    for (letter in currentQuestion.answers) {
+                        answers.push(
+                            `<option value="${currentQuestion.answers[letter]}">${currentQuestion.answers[letter]}</option>`
+                        );
+                    }
+                    answers.push(
+                        `</select>
+                        </div>
+                        <div class="dropdownCol">
+                            <div class="dropdownText">Investable assets do not include the value of your home, 401k or savings accounts savings or emergency fund. HCR Wealth Advisors works with investors and families with over $500,000.</div>
+                        </div>
+                        </div>`
                     );
                 }
 
@@ -189,8 +219,8 @@
                 "Business owner": 7,
                 "Retired": 6
             },
-            correctAnswer: "a",
-            buttonText: "Let's keep going!"
+            buttonText: "Let's keep going!",
+            type: "radio"
         },
         {
             title: "Significant Life Event",
@@ -210,8 +240,8 @@
                 "Retiring": 10,
                 "All is good now": 9
             },
-            correctAnswer: "a",
-            buttonText: "Thanks for sharing!"
+            buttonText: "Thanks for sharing!",
+            type: "radio"
         },
         {
             title: "Current Savings Rate",
@@ -231,8 +261,8 @@
                 "Over 20%": 12,
                 "I don't know": 8.5
             },
-            correctAnswer: "a",
-            buttonText: "Let's keep going!"
+            buttonText: "Let's keep going!",
+            type: "radio"
         },
         {
             title: "Financial Concerns",
@@ -252,8 +282,8 @@
                 "Being able to retire": 5,
                 "Medical costs": 4.5
             },
-            correctAnswer: "a",
-            buttonText: "Thanks for the insights!"
+            buttonText: "Thanks for the insights!",
+            type: "checkbox"
         },
         {
             title: "Investable Assets",
@@ -273,8 +303,8 @@
                 "$2MM - $5MM": 13,
                 "$5MM+": 14
             },
-            correctAnswer: "a",
-            buttonText: "Let's Keep it Growing!"
+            buttonText: "Let's Keep it Growing!",
+            type: "dropdown"
         },
         {
             title: "Financial Advice",
@@ -294,8 +324,8 @@
                 "2-3 times a year": 8,
                 "4+ times a year": 9
             },
-            correctAnswer: "a",
-            buttonText: "We can help!"
+            buttonText: "We can help!",
+            type: "radio"
         },
         {
             title: "Financial Plan",
@@ -315,8 +345,8 @@
                 "2-3 times a year": 8,
                 "4+ times a year": 9
             },
-            correctAnswer: "a",
-            buttonText: "We're here to help!"
+            buttonText: "We're here to help!",
+            type: "radio"
         },
         {
             title: "Estate Planning",
@@ -336,8 +366,8 @@
                 "Reviewed last year": 8,
                 "Reviewed recently": 9
             },
-            correctAnswer: "a",
-            buttonText: "Put house in order!"
+            buttonText: "Put house in order!",
+            type: "radio"
         },
         {
             title: "Financial Freedom",
@@ -355,8 +385,8 @@
                 "Yes, they are": 8,
                 "No, they are not": 6
             },
-            correctAnswer: "a",
-            buttonText: "Almost finished!"
+            buttonText: "Almost finished!",
+            type: "radio"
         }
     ];
 
