@@ -49,7 +49,7 @@
                         `</select>
                         </div>
                         <div class="dropdownCol">
-                            <div class="dropdownText">Investable assets do not include the value of your home, 401k or savings accounts savings or emergency fund. HCR Wealth Advisors works with investors and families with over $500,000.</div>
+                            <div class="dropdownText">Investable assets do not include the value of your home or emergency fund. HCR Wealth Advisors works with investors and families with over $500,000.</div>
                         </div>
                         </div>`
                     );
