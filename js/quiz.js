@@ -70,7 +70,14 @@
 
         // keep track of user's answers
         let userScore = 0;
-        const userSummary = [];
+        const userSummary = [
+            `<div class="headerRow">
+                <div class="h1Container">
+                    <h1>Financial Freedom<br />
+                        <span class="h1-grey">Review</span><img id="clarity-formula-logo" src="img/Clarity-Formula-Logo.png" alt="The Clarity Formula"></h1>
+                </div>
+            <div class="congratsContainer">Congratulations, <span class="userName">${firstName} ${lastName}!</span></div>`
+        ];
 
         // for each question...
         myQuestions.forEach((currentQuestion, questionNumber) => {
@@ -87,27 +94,36 @@
                 const thisScore = currentQuestion.scores[userAnswerKey];
                 userScore = userScore + thisScore;
 
-                userSummary.push(
-                    `<div class="resultQuestionContainer">${questionNumber + 1}: ${currentQuestion.question}<br />
-                    <div class="userAnswerContainer">${userAnswer} (${thisScore})</div></div>`
-                );
-
             }
             // if answer is blank
             else {
                 // color the answers red
                 answerContainers[questionNumber].style.color = 'red';
-                userSummary.push(
-                    `<div class="resultQuestionContainer">${questionNumber + 1}:  ${currentQuestion.question}<br />
-                    <div class="userAnswerContainer">n/a</div></div>`
-                );
             }
         });
 
         userSummary.push(
-            `<div class="userInfo">Name: ${firstName} ${lastName}<br />
-                                    Email: ${emailAddress}</div>
-            <div class="userScore">Score: ${userScore}</div>`
+            `<div class="userScoreContainer"><div class="userScoreText">Your Financial<br />Freedom Score is...</div>
+            <div class="userScoreNumber lightblue">${userScore}</div></div></div>
+            <div class="userSummary">We're here to help you find the financial freedom you' re looking for in life. Interested in scheduling a no cost, no obligation meeting?</div>
+            <button class="meetingButton">Schedule a Meeting</button>
+            <hr />
+            <div class="userSummary"><strong>A click away!</strong> Your <span class="lightblue">Financial Freedom Report</span> is ready for your review, please confirm your email address... just to be sure!</div>
+            <div id="reportFormContainer">
+            <script type="text/javascript" id="aoform-script-9349f916-1ace-41f2-940a-f18ce5632a58:d-0001">!function(o,t,e,a){o._aoForms=o._aoForms||[],o._aoForms.push(a);var n=function(){var o=t.createElement(e);o.src=("https:"==t.location.protocol?"https://":"http://")+"a43621.actonservice.com/acton/content/form_embed.js",o.async=!0;for(var a=t.getElementsByTagName(e)[0],n=a.parentNode,c=document.getElementsByTagName("script"),r=!1,s=0;s<c.length;s++){if(c[s].getAttribute("src")==o.getAttribute("src"))r=!0;}r?typeof(_aoFormLoader)!="undefined"?_aoFormLoader.load({id:"9349f916-1ace-41f2-940a-f18ce5632a58:d-0001",accountId:"43621",domain:"a43621.actonservice.com",isTemp:false,noStyle:false,prefill:false}):"":n.insertBefore(o,a)};window.attachEvent?window.attachEvent("onload",n):window.addEventListener("load",n,!1),n()}(window,document,"script",{id:"9349f916-1ace-41f2-940a-f18ce5632a58",accountId:"43621",domain:"a43621.actonservice.com",isTemp:false,noStyle:false,prefill:false});</script>
+            </div>
+            <hr />
+            <div class="videoRow">
+            <div class="videoContainer"></div>
+            <div class="userSummary">
+                <div class="userSummaryHeader">Why Work With a CFP<sup>&reg;</sup>?<br />Trust. Knowledge. Expertise.</div>
+                Your <span class="lightblue">Financial Freedom</span> eserves a customized financial plan and the personalized service to help you reach your goals.
+            </div>
+            </div>
+            <div class="center">
+            <button class="meetingButton center">Schedule a Meeting</button>
+            </div>
+            `
         )
 
         // show number of correct answers out of total

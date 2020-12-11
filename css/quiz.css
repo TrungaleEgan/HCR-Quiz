@@ -116,7 +116,7 @@ body {
     background-color: white;
 }
 
-.h1-container {
+.h1Container {
     width: max-content;
     width: -moz-max-content;
     margin: 0px auto;
@@ -251,8 +251,7 @@ button:hover,
     z-index: 2;
 }
 
-.quiz-container,
-#results {
+.quiz-container {
     position: relative;
     transition: .5s;
 }
@@ -316,29 +315,83 @@ button:hover,
 /*** RESULTS ***/
 
 #results {
-    width: 70%;
-    border: 8px solid grey;
-    padding: 40px;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 80vh;
+    max-width: 1080px;
     margin: 0px auto;
-}
-
-.resultQuestionContainer,
-.userInfo,
-.userScore {
-    width: 30%;
-    margin: 20px auto;
-    font-size: clamp(.7rem, 2.5vw, 1rem);
     text-align: left;
 }
 
-.userAnswerContainer {
+.headerRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#results .h1Container,
+.congratsContainer,
+.userScoreContainer {
+    margin: 20px 0px;
+}
+
+#results h1 {
+    margin: 0px;
+}
+
+.congratsContainer {
+    font-size: 3rem;
+}
+
+.userName {
+    color: #236192;
     font-weight: bold;
-    background: #8d8d8d7a;
+}
+
+.userScoreContainer {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #236192;
+    line-height: 1;
+}
+
+.userScoreNumber {
+    font-size: 8rem;
+    display: inline-block;
+    width: -moz-max-content;
+}
+
+.userScoreText {
+    display: inline-block;
+    width: -moz-max-content;
+}
+
+#results hr {
+    border-top: 2px solid #000;
+    margin: 30px 0px;
+}
+
+.userSummary {
+    font-size: 2rem;
+    margin: 30px 0px;
+}
+
+.userSummaryHeader {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.meetingButton {
+    margin: 30px 0px;
+}
+
+.lightblue {
+    color: #2DCCD3;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
 }
 
 
