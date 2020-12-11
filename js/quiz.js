@@ -114,7 +114,9 @@
             </div>
             <hr />
             <div class="videoRow">
-            <div class="videoContainer"></div>
+            <div class="videoContainer">
+            <img src="img/hcr-video-thumbnail.png">
+            </div>
             <div class="userSummary">
                 <div class="userSummaryHeader">Why Work With a CFP<sup>&reg;</sup>?<br />Trust. Knowledge. Expertise.</div>
                 Your <span class="lightblue">Financial Freedom</span> eserves a customized financial plan and the personalized service to help you reach your goals.
