@@ -13,7 +13,7 @@
                 // variable to store the list of possible answers
                 const answers = [];
 
-                if (currentQuestion.type == "radio") {
+                if (currentQuestion.inputType == "radio") {
                     for (letter in currentQuestion.answers) {
                         // ...add an HTML radio button
                         answers.push(
@@ -23,7 +23,9 @@
                             </label>`
                         );
                     }
-                } else if (currentQuestion.type == "checkbox") {
+                    // check if there is additional copy
+
+                } else if (currentQuestion.inputType == "checkbox") {
                     for (letter in currentQuestion.answers) {
                         // ... or a checkbox
                         answers.push(
@@ -33,26 +35,6 @@
                             </label>`
                         );
                     }
-                } else if (currentQuestion.type == "dropdown") {
-                    // ... or a dropdown
-                    answers.push(
-                        `<div class="dropdownRow">
-                        <div class="dropdownCol">
-                        <select name="question${questionNumber}" id="assetsDropdown">`
-                    );
-                    for (letter in currentQuestion.answers) {
-                        answers.push(
-                            `<option value="${currentQuestion.answers[letter]}">${currentQuestion.answers[letter]}</option>`
-                        );
-                    }
-                    answers.push(
-                        `</select>
-                        </div>
-                        <div class="dropdownCol">
-                            <div class="dropdownText">Investable assets do not include the value of your home or emergency fund. HCR Wealth Advisors works with investors and families with over $500,000.</div>
-                        </div>
-                        </div>`
-                    );
                 }
 
                 // add this question and its answers to the output
@@ -62,8 +44,21 @@
                         <div class="icon"> <img alt="${currentQuestion.title}" src="${currentQuestion.icon}"> </div>
                         <div class="question"> ${currentQuestion.question} </div>
                         <div class="answers"> ${answers.join("")} </div>
-                    </div>`
+                    `
                 );
+
+                if (currentQuestion.helpText) {
+                    // if there is additional text
+                    output.push(
+                        `<div class="helpText">${currentQuestion.helpText}</div>
+                        </div>`
+                    );
+                } else {
+                    // if not
+                    output.push(
+                        `</div>`
+                    );
+                }
 
                 // add new navigation number
                 questionNavOutput.push(
@@ -225,7 +220,7 @@
                 "Retired": 6
             },
             buttonText: "Let's keep going!",
-            type: "radio"
+            inputType: "radio"
         },
         {
             title: "Significant Life Event",
@@ -246,7 +241,7 @@
                 "All is good now": 9
             },
             buttonText: "Thanks for sharing!",
-            type: "radio"
+            inputType: "radio"
         },
         {
             title: "Current Savings Rate",
@@ -267,7 +262,7 @@
                 "I don't know": 8.5
             },
             buttonText: "Let's keep going!",
-            type: "radio"
+            inputType: "radio"
         },
         {
             title: "Financial Concerns",
@@ -288,7 +283,7 @@
                 "Medical costs": 4.5
             },
             buttonText: "Thanks for the insights!",
-            type: "checkbox"
+            inputType: "checkbox"
         },
         {
             title: "Investable Assets",
@@ -309,7 +304,8 @@
                 "$5MM+": 14
             },
             buttonText: "Let's Keep it Growing!",
-            type: "dropdown"
+            inputType: "radio",
+            helpText: "Investable assets do not include the value of your home or emergency fund. HCR Wealth Advisors works with investors and families with over $500,000."
         },
         {
             title: "Financial Advice",
@@ -330,7 +326,7 @@
                 "4+ times a year": 9
             },
             buttonText: "We can help!",
-            type: "radio"
+            inputType: "radio"
         },
         {
             title: "Financial Plan",
@@ -351,7 +347,7 @@
                 "4+ times a year": 9
             },
             buttonText: "We're here to help!",
-            type: "radio"
+            inputType: "radio"
         },
         {
             title: "Estate Planning",
@@ -372,7 +368,7 @@
                 "Reviewed recently": 9
             },
             buttonText: "Put house in order!",
-            type: "radio"
+            inputType: "radio"
         },
         {
             title: "Financial Freedom",
@@ -391,7 +387,7 @@
                 "No, they are not": 6
             },
             buttonText: "Almost finished!",
-            type: "radio"
+            inputType: "radio"
         }
     ];
 
