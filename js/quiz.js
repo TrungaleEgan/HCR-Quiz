@@ -417,13 +417,31 @@
     );
 
     firstFormSubmitButton.addEventListener("click", function() {
-        firstFormContainer.classList.add('hidden');
-        secondFormContainer.classList.remove('hidden');
+        const emailInput = document.getElementById('emailAddress');
+        if (emailInput.value) {
+            firstFormContainer.classList.add('hidden');
+            secondFormContainer.classList.remove('hidden');
+        } else {
+            emailInput.style.color = 'red';
+            emailInput.style.border = '2px solid red';
+        }
     });
 
     secondFormSubmitButton.addEventListener("click", function() {
-        formContainer.classList.add('hidden');
-        outerquizContainer.classList.remove('hidden');
+        // find selected answer
+        const ageInput = document.getElementById('form-2');
+        const answerContainer = ageInput.getElementsByClassName('answers')[0];
+        const selector = `input[name=age]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+        // if answer exists
+        if (userAnswer) {
+            formContainer.classList.add('hidden');
+            outerquizContainer.classList.remove('hidden');
+        } else {
+            answerContainer.style.color = 'red';
+        }
+
     });
 
 })();
