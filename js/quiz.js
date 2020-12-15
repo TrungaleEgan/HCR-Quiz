@@ -139,8 +139,7 @@
                 <input type="text" id="name" name="name" placeholder="Name (required)" required>
                 <input type="email" id="email" name="email" placeholder="Email (required)" required>
                 <input type="text" id="mobilePhone" name="mobilePhone" placeholder="Mobile Phone Number (not required)" required>
-            </div>
-            <script type="text/javascript" id="aoform-script-9349f916-1ace-41f2-940a-f18ce5632a58:d-0001">!function(o,t,e,a){o._aoForms=o._aoForms||[],o._aoForms.push(a);var n=function(){var o=t.createElement(e);o.src=("https:"==t.location.protocol?"https://":"http://")+"a43621.actonservice.com/acton/content/form_embed.js",o.async=!0;for(var a=t.getElementsByTagName(e)[0],n=a.parentNode,c=document.getElementsByTagName("script"),r=!1,s=0;s<c.length;s++){if(c[s].getAttribute("src")==o.getAttribute("src"))r=!0;}r?typeof(_aoFormLoader)!="undefined"?_aoFormLoader.load({id:"9349f916-1ace-41f2-940a-f18ce5632a58:d-0001",accountId:"43621",domain:"a43621.actonservice.com",isTemp:false,noStyle:false,prefill:false}):"":n.insertBefore(o,a)};window.attachEvent?window.attachEvent("onload",n):window.addEventListener("load",n,!1),n()}(window,document,"script",{id:"9349f916-1ace-41f2-940a-f18ce5632a58",accountId:"43621",domain:"a43621.actonservice.com",isTemp:false,noStyle:false,prefill:false});</script>
+            </div>            
             </div>
             <hr />
             <div class="videoRow">
@@ -436,6 +435,9 @@
 
         // if answer exists
         if (userAnswer) {
+            // submit Form 1 to Act-On
+
+            // move to Quiz portion
             formContainer.classList.add('hidden');
             outerquizContainer.classList.remove('hidden');
         } else {
