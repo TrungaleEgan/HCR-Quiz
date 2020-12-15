@@ -410,7 +410,9 @@ select[aria-disabled=true] {
 
 /*** RESULTS ***/
 
-#results {
+#results,
+#requestForm,
+#video-Row {
     max-width: 1080px;
     margin: 0px auto;
     text-align: left;
@@ -460,7 +462,7 @@ select[aria-disabled=true] {
     width: -moz-max-content;
 }
 
-#results hr {
+#requestForm hr {
     border-top: 2px solid #000;
     margin: 30px 0px;
 }

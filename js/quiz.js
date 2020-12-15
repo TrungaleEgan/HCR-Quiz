@@ -132,34 +132,16 @@
             <div class="userScoreNumber lightblue">${userScore}</div></div></div>
             <div class="userSummary">We're here to help you find the financial freedom you're looking for in life. Interested in scheduling a no cost, no obligation meeting?</div>
             <button class="meetingButton">Schedule a Meeting</button>
-            <hr />
-            <div class="userSummary"><strong>A click away!</strong> Your <span class="lightblue">Financial Freedom Report</span> is ready for your review, please confirm your email address... just to be sure!</div>
-            <div id="reportFormContainer">
-            <div class="resultsFormFields">
-                <input type="text" id="name" name="name" placeholder="Name (required)" required>
-                <input type="email" id="email" name="email" placeholder="Email (required)" required>
-                <input type="text" id="mobilePhone" name="mobilePhone" placeholder="Mobile Phone Number (not required)" required>
-            </div>            
-            </div>
-            <hr />
-            <div class="videoRow">
-            <div class="videoContainer">
-            <img src="img/hcr-video-thumbnail.png">
-            </div>
-            <div class="userSummary">
-                <div class="userSummaryHeader">Why Work With a CFP<sup>&reg;</sup>?<br />Trust. Knowledge. Expertise.</div>
-                According to a Vanguard study, working with a financial advisor can result in a net portfolio return that’s 3% higher than DIY financial and investment planning.            
-            </div>
-            </div>
-            <div class="center">
-            <button class="meetingButton center">Schedule a Meeting</button>
-            </div>
             `
         )
 
         // show number of correct answers out of total
         // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         resultsContainer.innerHTML = userSummary.join('');
+
+        // show Video Row
+        videoRow.classList.remove('hidden');
+        requestForm.classList.remove('hidden');
     }
 
     function showSlide(n) {
@@ -201,6 +183,8 @@
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const refreshButton = document.getElementById('refresh-icon');
+    const requestForm = document.getElementById('requestForm');
+    const videoRow = document.getElementById('video-Row');
     // QUIZ QUESTIONS
     const myQuestions = [{
             title: "Current Employment",
