@@ -488,16 +488,14 @@ select[aria-disabled=true] {
 
 .resultsFormFields input {
     display: block;
-    padding: 10px;
+    padding: 10px !important;
     border: 2px solid black;
-    border-radius: 3px;
-    font-size: clamp(.6rem, 1.2vw, 1rem);
+    border-radius: 3px !important;
+    font-size: clamp(.6rem, 1.2vw, 1rem) !important;
     font-weight: bold;
     text-transform: uppercase;
     margin: 10px;
     cursor: pointer;
-    padding: 10px;
-    width: 200px;
     color: black;
 }
 

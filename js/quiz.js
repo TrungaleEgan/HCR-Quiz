@@ -139,9 +139,13 @@
         // resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
         resultsContainer.innerHTML = userSummary.join('');
 
-        // show Video Row
-        videoRow.classList.remove('hidden');
+        // show Form + Video Row
         requestForm.classList.remove('hidden');
+        videoRow.classList.remove('hidden');
+
+        // Populate Act-On Form
+        actonNameInput.value = firstName + ' ' + lastName;
+        actonEmailInput.value = emailAddress;
     }
 
     function showSlide(n) {
@@ -185,6 +189,11 @@
     const refreshButton = document.getElementById('refresh-icon');
     const requestForm = document.getElementById('requestForm');
     const videoRow = document.getElementById('video-Row');
+
+    // VARIABLES - ACT-ON FORM
+    const actonNameInput = document.getElementById('b1607668970086');
+    const actonEmailInput = document.getElementById('b1607668998892');
+
     // QUIZ QUESTIONS
     const myQuestions = [{
             title: "Current Employment",
