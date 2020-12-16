@@ -144,6 +144,8 @@
         videoRow.classList.remove('hidden');
 
         // Populate Act-On Form
+        const actonNameInput = document.getElementById('b1607668970086');
+        const actonEmailInput = document.getElementById('b1607668998892');
         actonNameInput.value = firstName + ' ' + lastName;
         actonEmailInput.value = emailAddress;
     }
@@ -190,9 +192,6 @@
     const requestForm = document.getElementById('requestForm');
     const videoRow = document.getElementById('video-Row');
 
-    // VARIABLES - ACT-ON FORM
-    const actonNameInput = document.getElementById('b1607668970086');
-    const actonEmailInput = document.getElementById('b1607668998892');
 
     // QUIZ QUESTIONS
     const myQuestions = [{
