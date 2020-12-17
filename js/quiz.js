@@ -162,7 +162,7 @@
         actonAgeInput.value = userAge;
 
         const actonScore = document.getElementById('b1608139543053');
-        actonAgeInput.value = userScore;
+        actonScore.value = userScore;
 
 
         const actonQ1 = document.getElementById('b1607707104518');
