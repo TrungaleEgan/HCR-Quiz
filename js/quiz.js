@@ -94,6 +94,7 @@
         const answerContainers = quizContainer.querySelectorAll('.answers');
 
         // keep track of user's answers
+        let quizAnswers = new Array(myQuestions.length);
         let userScore = 0;
         const userSummary = [
             `<div class="headerRow">
@@ -119,6 +120,9 @@
                 const thisScore = currentQuestion.scores[userAnswerKey];
                 userScore = userScore + thisScore;
 
+                // save answer for act-on form
+                quizAnswers[questionNumber] = userAnswer;
+
             }
             // if answer is blank
             else {
@@ -143,11 +147,44 @@
         requestForm.classList.remove('hidden');
         videoRow.classList.remove('hidden');
 
-        // Populate Act-On Form
+        // Act-On Form fields
         const actonNameInput = document.getElementById('b1607668970086');
-        const actonEmailInput = document.getElementById('b1607668998892');
         actonNameInput.value = firstName + ' ' + lastName;
+
+        const actonEmailInput = document.getElementById('b1607668998892');
         actonEmailInput.value = emailAddress;
+
+        const actonAgeInput = document.getElementById('b1607707084981');
+        const ageInput = document.getElementById('form-2');
+        const answerContainer = ageInput.getElementsByClassName('answers')[0];
+        const selector = `input[name=age]:checked`;
+        const userAge = (answerContainer.querySelector(selector) || {}).value;
+        actonAgeInput.value = userAge;
+
+        const actonScore = document.getElementById('b1608139543053');
+        actonAgeInput.value = userScore;
+
+
+        const actonQ1 = document.getElementById('b1607707104518');
+        actonQ1.value = quizAnswers[0];
+        const actonQ2 = document.getElementById('b1607707272513');
+        actonQ2.value = quizAnswers[1];
+        const actonQ3 = document.getElementById('b1607707272080');
+        actonQ3.value = quizAnswers[2];
+        const actonQ4 = document.getElementById('b1607707271685');
+        actonQ4.value = quizAnswers[3];
+        const actonQ5 = document.getElementById('b1607707271274');
+        actonQ5.value = quizAnswers[4];
+        const actonQ6 = document.getElementById('b1607707270762');
+        actonQ6.value = quizAnswers[5];
+        const actonQ7 = document.getElementById('b1607707270307');
+        actonQ7.value = quizAnswers[6];
+        const actonQ8 = document.getElementById('b1607707268606');
+        actonQ8.value = quizAnswers[7];
+        const actonQ9 = document.getElementById('b1607707266834');
+        actonQ9.value = quizAnswers[8];
+
+
     }
 
     function showSlide(n) {
@@ -395,9 +432,13 @@
     showSlide(currentSlide);
 
     // EVENT LISTENERS
+    // window.onbeforeunload = function() {
+    //      return 'Are you sure you want to leave?';
+    // };
     submitButton.addEventListener('click', showResults);
     nextButton.addEventListener("click", showNextSlide);
     refreshButton.addEventListener("click", reloadQuiz);
+
 
     numbers.forEach(
         (currentNumber, numberIndex) => {
@@ -423,15 +464,17 @@
         const ageInput = document.getElementById('form-2');
         const answerContainer = ageInput.getElementsByClassName('answers')[0];
         const selector = `input[name=age]:checked`;
-        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+        const userAge = (answerContainer.querySelector(selector) || {}).value;
 
         // if answer exists
-        if (userAnswer) {
-            // submit Form 1 to Act-On
-
+        if (userAge) {
             // move to Quiz portion
             formContainer.classList.add('hidden');
             outerquizContainer.classList.remove('hidden');
+
+            // submit Form 1 to Act-On
+            // const actOnForm = document.getElementById("formPartOne");
+            // actOnForm.submit();
         } else {
             answerContainer.style.color = 'red';
         }

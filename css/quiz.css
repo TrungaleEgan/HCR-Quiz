@@ -215,6 +215,7 @@ button,
     padding: 15px 40px;
     cursor: pointer;
     margin: 20px auto;
+    width: max-content;
 }
 
 button:hover,
@@ -530,6 +531,11 @@ select[aria-disabled=true] {
 
 .center {
     text-align: center;
+}
+
+footer {
+    padding: 20px 0px;
+    font-size: small;
 }
 
 

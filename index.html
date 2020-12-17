@@ -75,47 +75,51 @@
         </div>
     </header>
 
-    <div id="form-container">
-        <div class="h1Container">
-            <h1>Financial Freedom<br />
-                <span class="h1-grey">Review</span><img id="clarity-formula-logo" src="img/Clarity-Formula-Logo.png" alt="The Clarity Formula"></h1>
-        </div>
-
-        <div class="question">Let's define what financial freedom means to you and help you achieve it!</div>
-
-        <div id="form-1" class="">
-            <div class="question">We'll start by getting to know you a bit better... please tell us your name.</div>
-            <div class="formFields">
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required>
+    <!--form id="formPartOne" action="https://a43621.actonservice.com/acton/eform/43621/f3557ecb-0c31-4af3-98e2-81d859aa3dfc/d-ext-0001"-->
+    <form id="formPartOne">
+        <div id="form-container">
+            <div class="h1Container">
+                <h1>Financial Freedom<br />
+                    <span class="h1-grey">Review</span><img id="clarity-formula-logo" src="img/Clarity-Formula-Logo.png" alt="The Clarity Formula"></h1>
             </div>
-            <input id="form-1-submit" type="submit" value="Nice to Meet You!">
-        </div>
 
-        <div id="form-2" class="hidden">
-            <div class="question">Please tell us your age range. Knowing your time horizon is essential to planning!</div>
-            <div class="answers">
-                <label>
+            <div class="question">Let's define what financial freedom means to you and help you achieve it!</div>
+
+            <div id="form-1" class="">
+                <div class="question">We'll start by getting to know you a bit better... please tell us your name.</div>
+                <div class="formFields">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    <input type="email" id="emailAddress" name="emailAddress" placeholder="Email Address" required>
+                </div>
+                <div id="form-1-submit">Nice to Meet You!</div>
+            </div>
+
+            <div id="form-2" class="hidden">
+                <div class="question">Please tell us your age range. Knowing your time horizon is essential to planning!</div>
+                <div class="answers">
+                    <label>
                     <input type="radio" name="age" value="21-35 Years">
                     21-35 Years
                 </label>
-                <label>
+                    <label>
                     <input type="radio" name="age" value="36-50 Years">
                     36-50 Years
                 </label>
-                <label>
+                    <label>
                     <input type="radio" name="age" value="51-65 Years">
                     51-65 Years
                 </label>
-                <label>
+                    <label>
                     <input type="radio" name="age" value="65+ Years">
                     65+ Years
                 </label>
+                </div>
+                <!--input id="form-2-submit" type="submit" value="Let's Continue"-->
+                <div id="form-2-submit">Let's Continue</div>
             </div>
-            <input id="form-2-submit" type="submit" value="Let's Continue">
         </div>
-    </div>
+    </form>
 
     <div class="quiz-container hidden">
         <div id="quiz"></div>
@@ -179,6 +183,10 @@
             <button class="meetingButton center">Schedule a Meeting</button>
         </div>
     </div>
+
+    <footer>
+        <div id="disclaimer">&copy;HCR Wealth Advisors 2020. HCR Wealth Advisors is an SEC-registered investment adviser.</div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
