@@ -437,7 +437,7 @@ select[aria-disabled=true] {
 }
 
 .congratsContainer {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
 .userName {
@@ -446,7 +446,7 @@ select[aria-disabled=true] {
 }
 
 .userScoreContainer {
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: bold;
     color: #236192;
     line-height: 1;
@@ -567,5 +567,11 @@ footer {
     }
     .question {
         margin: 0px auto;
+    }
+    .videoRow {
+        flex-direction: column;
+    }
+    .videoRow>div {
+        width: 94%;
     }
 }
